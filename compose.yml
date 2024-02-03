@@ -1,13 +1,7 @@
 version: "3.8"
-networks:
-  reverse-proxy:
-    external: true
+
 services:
   db:
-    networks:
-      reverse-proxy:
-        aliases:
-          - db
     env_file:
       - .env
     ports:
